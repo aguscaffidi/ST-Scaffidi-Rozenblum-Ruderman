@@ -8,8 +8,8 @@ ESP32Time rtc;
 
 // Credenciales WIFI
 
-const char* ssid = "Phome2";
-const char* password = "4321Pablo";
+const char* ssid = "";
+const char* password = "";
 
 //Configuración servidor NTP
 
