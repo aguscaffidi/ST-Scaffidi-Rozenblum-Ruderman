@@ -31,13 +31,13 @@ int botRequestDelay = 1000; /// intervalo
 int displayRequestDelay = 200;
 unsigned long lastTimeBotRan; /// ultimo tiempo
 unsigned long lastTimeDisplayRan;
-int temp;
+float temp;
 String tempa;
 
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
   
   int current_screen = 1;
-  int temp_umbral = 28;
+  float temp_umbral = 28;
   bool flagSubir, flagBajar;
   
 DHT dht(DHTPIN, DHTTYPE);
@@ -198,7 +198,7 @@ void handleNewMessages(int numNewMessages) {
       
       if(temp >= temp_umbral){
 
-    bot.sendMessage(CHAT_ID, "too hot daddy", "");
+    bot.sendMessage(chat_id, "too hot daddy", "");
 
   }
     
